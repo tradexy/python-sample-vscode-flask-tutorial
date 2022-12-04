@@ -37,7 +37,7 @@ steps:
 
 - task: PublishCodeCoverageResults@1
   inputs:
-    codeCoverageTool: "JaCoCo"
-    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
-    reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
+    codeCoverageTool: "Cobertura"
+    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/cobertura/cobertura.xml"
+    reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/cobertura"
     failIfCoverageEmpty: true
