@@ -23,11 +23,9 @@ pool:
   matrix:
     Python37:
       Python38:
-        python.version: '3.11.0'
+        python.version: '3.10.9'
       Python39:
         python.version: '3.11.1'
-      Python310:
-        python.version: '3.12.0'
 
 
 steps:
