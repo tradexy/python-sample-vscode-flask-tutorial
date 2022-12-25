@@ -30,3 +30,8 @@ steps:
   inputs:
     scriptSource: 'inline'
     script: 'print ("Hello World")'
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    scriptPath: '$(Build.SourcesDirectory)/quickpy.py'
