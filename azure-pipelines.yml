@@ -39,4 +39,4 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
-    scriptPath: '$(System.DefaultWorkingDirectory)/quickpy.py'
+    scriptPath: '$(Agent.BuildDirectory)/quickpy.py'
