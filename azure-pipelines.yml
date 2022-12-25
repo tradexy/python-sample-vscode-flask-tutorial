@@ -35,3 +35,8 @@ steps:
   inputs:
     scriptSource: 'filePath'
     scriptPath: '$(Build.SourcesDirectory)/quickpy.py'
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    scriptPath: '$(System.DefaultWorkingDirectory)/quickpy.py'
