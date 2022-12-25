@@ -29,14 +29,29 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'inline'
-    script: 'print ("Hello World")'
+    script: import re
+# File: flow-log-parser.py
+import json
 
-#- task: PythonScript@0
-#  inputs:
-#    scriptSource: 'filePath'
-#    scriptPath: '$(Build.SourcesDirectory)/quickpy.py'
+with open('flow.log', 'r') as f:
+    # Initialize a dictionary to store the sums of the values in column 10
+    # for each account in column 2
+    sums = {}
+    # Read the first line of the file (the header)
+    header = f.readline()
+    # Iterate over the remaining lines of the file
+    for line in f:
+        # Split the line into columns using space as the delimiter
+        columns = line.split(' ')
+        # Get the value in column 2 (the account)
+        account = columns[1]
+        # Convert the value in column 10 to an integer
+        col_10_value = int(columns[9])
+        # Add the value in column 10 to the sum for this account
+        if account in sums:
+            sums[account] += col_10_value
+        else:
+            sums[account] = col_10_value
 
-- task: PythonScript@0
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: '$(Agent.BuildDirectory)/quickpy.py'
+# Print the sum of the values in column 10 for each account in column 2 in JSON format
+print(json.dumps(sums, indent=2))
