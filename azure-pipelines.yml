@@ -33,6 +33,6 @@ steps:
   displayName: 'Run a Python script'
   inputs:
     scriptSource: 'filePath'
-    scriptPath: Agent.BuildDirectory/quickpy.py
+    $(System.DefaultWorkingDirectory)\testpy.py
 
 
