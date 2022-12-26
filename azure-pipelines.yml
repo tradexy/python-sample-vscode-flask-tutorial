@@ -33,6 +33,4 @@ steps:
   displayName: 'Run a Python script'
   inputs:
     scriptSource: 'filePath'
-    $(System.DefaultWorkingDirectory)\testpy.py
-
-
+    scriptPath: $(System.DefaultWorkingDirectory)\testpy.py
