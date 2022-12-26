@@ -33,4 +33,4 @@ steps:
   displayName: 'Run a Python script'
   inputs:
     scriptSource: 'filePath'
-    scriptPath: $(System.DefaultWorkingDirectory)\$(release.primaryartifactsourcealias)\testpy.py
+    scriptPath: $(release.primaryartifactsourcealias)\testpy.py
