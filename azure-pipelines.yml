@@ -29,11 +29,11 @@ steps:
     scriptSource: 'inline'
     script: 'print ("Hello World")'
 
-- task: PythonScript@0
-  displayName: 'Run a Python script'
-  inputs:
-    scriptSource: 'filePath'
-    scriptPath: '$(Build.SourcesDirectory)/testpy.py'
+#- task: PythonScript@0
+#  displayName: 'Run a Python script'
+#  inputs:
+#    scriptSource: 'filePath'
+#    scriptPath: '$(Build.SourcesDirectory)/testpy.py'
 
 # (myAzurePipelineProject)
 #'$(System.DefaultWorkingDirectory)/tests/base_pipeline_status.py'
