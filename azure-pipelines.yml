@@ -33,4 +33,6 @@ steps:
   displayName: 'Run a Python script'
   inputs:
     scriptSource: 'filePath'
-    scriptPath: $(myAzurePipelineProject)\testpy.py
+    scriptPath: $(myAzurePipelineProject)/testpy.py
+
+#'$(System.DefaultWorkingDirectory)/tests/base_pipeline_status.py'
