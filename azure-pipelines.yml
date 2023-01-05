@@ -35,6 +35,8 @@ steps:
     scriptSource: 'filePath'
     scriptPath: '$(Build.SourcesDirectory)/testpy.py'
 
+
+
 # (myAzurePipelineProject)
 #'$(System.DefaultWorkingDirectory)/tests/base_pipeline_status.py'
 # $(Build.SourcesDirectory)/
